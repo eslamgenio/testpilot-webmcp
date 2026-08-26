@@ -6,6 +6,8 @@ TestPilot is a compact release-engineering workspace where a human and an AI age
 
 The competition scenario focuses on e-commerce inventory safety in release **2.4**. Known tests initially pass, but a critical concurrent-purchase requirement has no coverage. An agent can discover that gap, create and run the missing test, diagnose the deterministic race condition, create a critical defect, link the evidence, and produce a **NOT READY** recommendation. Every mutation appears in the UI immediately.
 
+**Live demo:** [testpilot-qa.eslamgenio.chatgpt.site](https://testpilot-qa.eslamgenio.chatgpt.site/)
+
 ## Problem
 
 Traditional browser agents must infer intent from presentation: inspect the DOM, locate a control, click it, wait, and reinterpret the result. That is slow and fragile because layout, labels, loading states, and responsive behavior can change without the underlying business capability changing.
@@ -86,6 +88,17 @@ The production build emits a Cloudflare Worker-compatible Sites bundle in `dist/
 8. The agent calls `create_defect` with critical severity, then `link_defect_to_test`. DEF-001 appears with full evidence.
 9. The agent calls `get_release_readiness`; the dashboard changes to **NOT READY** because negative inventory is possible.
 10. Click **Reset Demo** to restore TC-001–TC-003, their passing baseline executions, no defects, and REQ-003 as uncovered.
+
+## Judge quick start
+
+1. Open the [public TestPilot site](https://testpilot-qa.eslamgenio.chatgpt.site/) in ChatGPT's in-app browser or Google Chrome 149+ with WebMCP testing enabled.
+2. Confirm the dashboard reports **14 agent tools live** and release 2.4 starts as **AT RISK**.
+3. Ask the agent: **“Check whether version 2.4 is safe to release.”**
+4. Allow the agent to inspect the release, close the REQ-003 coverage gap, execute the new concurrency test, diagnose its failure, create a critical defect, link the evidence, and reassess readiness.
+5. Confirm the dashboard finishes at **NOT READY**, with TC-004 failing because both customers purchased the final item and inventory reached `-1`.
+6. Select **Reset Demo** to restore the deterministic starting state before another walkthrough.
+
+No account, credentials, database setup, or seed command is required. Each browser receives an isolated anonymous demo session, so multiple judges can test the application without overwriting one another's state.
 
 ### Exact agent action sequence
 
@@ -219,7 +232,7 @@ vite.config.ts           Vinext, Sites, and Cloudflare runtime integration
 
 ## Hosting
 
-TestPilot is configured for OpenAI Sites with a logical D1 binding named `DB`. Sites owns the production database and applies the checked-in Drizzle migration during deployment. The initial deployment is owner-only; public access should be enabled only after the final hackathon review.
+TestPilot is publicly deployed on [OpenAI Sites](https://testpilot-qa.eslamgenio.chatgpt.site/) with a logical D1 binding named `DB`. Sites owns the production database and applies the checked-in Drizzle migration during deployment. Public visitors do not need an account; a secure anonymous session cookie keeps each visitor's deterministic demo workspace isolated.
 
 ## References
 

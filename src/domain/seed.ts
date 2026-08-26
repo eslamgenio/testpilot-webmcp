@@ -1,0 +1,106 @@
+import type { AppState } from "./types";
+
+export function createSeedState(): AppState {
+  return {
+    schema_version: 1,
+    revision: 1,
+    releases: [
+      {
+        id: "REL-2.4",
+        version: "2.4",
+        name: "Checkout Reliability",
+        status: "CANDIDATE",
+        created_at: "2026-08-25T09:00:00.000Z",
+      },
+    ],
+    requirements: [
+      {
+        id: "REQ-001",
+        release_version: "2.4",
+        title: "Standard inventory deduction",
+        description: "Normal checkout decreases inventory correctly.",
+        priority: "HIGH",
+      },
+      {
+        id: "REQ-002",
+        release_version: "2.4",
+        title: "Oversell prevention",
+        description: "A customer cannot buy more units than are available.",
+        priority: "CRITICAL",
+      },
+      {
+        id: "REQ-003",
+        release_version: "2.4",
+        title: "Concurrent inventory safety",
+        description: "Concurrent purchases of the final remaining item must never result in negative inventory.",
+        priority: "CRITICAL",
+      },
+    ],
+    test_cases: [
+      {
+        id: "TC-001",
+        title: "Purchase one item with sufficient inventory",
+        description: "Buy one unit while five units are available.",
+        requirement_id: "REQ-001",
+        expected_behavior: "Checkout succeeds and inventory decreases from 5 to 4.",
+        status: "ACTIVE",
+        created_by: "Human",
+        created_at: "2026-08-25T09:10:00.000Z",
+        simulation_key: "normal_purchase",
+      },
+      {
+        id: "TC-002",
+        title: "Purchase exact remaining inventory",
+        description: "Buy all three remaining units in one checkout.",
+        requirement_id: "REQ-001",
+        expected_behavior: "Checkout succeeds and inventory reaches exactly zero.",
+        status: "ACTIVE",
+        created_by: "Human",
+        created_at: "2026-08-25T09:12:00.000Z",
+        simulation_key: "exact_inventory",
+      },
+      {
+        id: "TC-003",
+        title: "Reject quantity above available inventory",
+        description: "Attempt to buy three units while only two are available.",
+        requirement_id: "REQ-002",
+        expected_behavior: "Checkout is rejected and inventory remains unchanged.",
+        status: "ACTIVE",
+        created_by: "Human",
+        created_at: "2026-08-25T09:14:00.000Z",
+        simulation_key: "over_purchase",
+      },
+    ],
+    executions: [
+      {
+        id: "EXE-001",
+        test_case_id: "TC-001",
+        result: "PASS",
+        duration_ms: 184,
+        failure_details: null,
+        evidence: { initial_inventory: 5, requested_quantity: 1, final_inventory: 4, checkout_result: "success" },
+        executed_at: "2026-08-25T09:30:00.000Z",
+      },
+      {
+        id: "EXE-002",
+        test_case_id: "TC-002",
+        result: "PASS",
+        duration_ms: 212,
+        failure_details: null,
+        evidence: { initial_inventory: 3, requested_quantity: 3, final_inventory: 0, checkout_result: "success" },
+        executed_at: "2026-08-25T09:31:00.000Z",
+      },
+      {
+        id: "EXE-003",
+        test_case_id: "TC-003",
+        result: "PASS",
+        duration_ms: 156,
+        failure_details: null,
+        evidence: { initial_inventory: 2, requested_quantity: 3, final_inventory: 2, checkout_result: "rejected" },
+        executed_at: "2026-08-25T09:32:00.000Z",
+      },
+    ],
+    defects: [],
+    activity: [],
+  };
+}

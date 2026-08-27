@@ -134,7 +134,7 @@ The TestPilot implementation is complete, publicly deployed, and production-veri
 
 ## Phase 4 — Demonstration video
 
-- [ ] **19. Write a video script and storyboard.**
+- [x] **19. Write a video script and storyboard.**
   - Target duration: approximately 2 minutes 30 seconds.
   - Suggested structure:
     1. Problem and value proposition.

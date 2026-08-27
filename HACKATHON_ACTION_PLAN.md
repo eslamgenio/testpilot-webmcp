@@ -61,7 +61,7 @@ The TestPilot implementation is complete, publicly deployed, and production-veri
   - Recommended repository name: `testpilot-webmcp`.
   - Do not expose Sites credentials, tokens, local databases, or temporary files.
 
-- [ ] **8. Push the complete source and Git history.**
+- [x] **8. Push the complete source and Git history.**
   - Include all source code, assets, database migrations, tests, and setup instructions.
   - Confirm the pushed commit matches the final deployed source.
 

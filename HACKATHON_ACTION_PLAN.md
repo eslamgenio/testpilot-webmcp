@@ -70,7 +70,7 @@ The TestPilot implementation is complete, publicly deployed, and production-veri
   - Add the public TestPilot URL to the repository website field.
   - Add relevant topics such as `webmcp`, `openai`, `qa`, `testing`, and `ai-agents`.
 
-- [ ] **10. Verify open-source license detection.**
+- [x] **10. Verify open-source license detection.**
   - Confirm the existing MIT `LICENSE` file is visible.
   - Confirm the hosting platform detects and displays the MIT license near the top of the repository page.
 

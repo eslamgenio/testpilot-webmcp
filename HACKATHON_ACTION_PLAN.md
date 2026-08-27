@@ -118,7 +118,7 @@ The TestPilot implementation is complete, publicly deployed, and production-veri
   - Confirm the dashboard ends at **NOT READY**.
   - Use **Reset Demo** before repeating the walkthrough.
 
-- [ ] **17. Capture polished screenshots.**
+- [x] **17. Capture polished screenshots.**
   - Initial dashboard showing **AT RISK**.
   - WebMCP status showing 14 tools available.
   - REQ-003 coverage gap.

@@ -57,7 +57,7 @@ The TestPilot implementation is complete, publicly deployed, and production-veri
 
 ## Phase 2 — Public source repository
 
-- [ ] **7. Create a public GitHub, GitLab, or Bitbucket repository.**
+- [x] **7. Create a public GitHub, GitLab, or Bitbucket repository.**
   - Recommended repository name: `testpilot-webmcp`.
   - Do not expose Sites credentials, tokens, local databases, or temporary files.
 

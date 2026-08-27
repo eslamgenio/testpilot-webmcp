@@ -74,7 +74,7 @@ The TestPilot implementation is complete, publicly deployed, and production-veri
   - Confirm the existing MIT `LICENSE` file is visible.
   - Confirm the hosting platform detects and displays the MIT license near the top of the repository page.
 
-- [ ] **11. Verify the repository from a fresh clone.**
+- [x] **11. Verify the repository from a fresh clone.**
   - Follow only the public README instructions.
   - Install dependencies.
   - Run the application locally.

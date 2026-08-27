@@ -127,7 +127,7 @@ The TestPilot implementation is complete, publicly deployed, and production-veri
   - DEF-001 traceability.
   - Final **NOT READY** release assessment.
 
-- [ ] **18. Select and prepare the project thumbnail.**
+- [x] **18. Select and prepare the project thumbnail.**
   - Use the strongest readable dashboard image.
   - Confirm it remains legible at Devpost thumbnail size.
   - Avoid personal data, unrelated browser chrome, or notifications.

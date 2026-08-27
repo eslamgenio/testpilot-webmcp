@@ -91,7 +91,7 @@ The production build emits a Cloudflare Worker-compatible Sites bundle in `dist/
 
 ## Judge quick start
 
-1. Open the [public TestPilot site](https://testpilot-qa.eslamgenio.chatgpt.site/) in ChatGPT's in-app browser or Google Chrome 149+ with WebMCP testing enabled.
+1. Open the [public TestPilot site](https://testpilot-qa.eslamgenio.chatgpt.site/) in ChatGPT's in-app browser, which supports WebMCP directly. Alternatively, use Google Chrome 149+, enable `chrome://flags/#enable-webmcp-testing`, and relaunch Chrome before opening the Site.
 2. Confirm the dashboard reports **14 agent tools live** and release 2.4 starts as **AT RISK**.
 3. Ask the agent: **“Check whether version 2.4 is safe to release.”**
 4. Allow the agent to inspect the release, close the REQ-003 coverage gap, execute the new concurrency test, diagnose its failure, create a critical defect, link the evidence, and reassess readiness.

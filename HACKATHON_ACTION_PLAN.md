@@ -86,7 +86,7 @@ The TestPilot implementation is complete, publicly deployed, and production-veri
   - Clearly state whether the project was newly created during the hackathon.
   - If any work predates August 25, 2026, document exactly what WebMCP functionality was added afterward.
 
-- [ ] **13. Add a judge-testing section to the public repository.**
+- [x] **13. Add a judge-testing section to the public repository.**
   - Public Site URL.
   - Supported WebMCP browsers.
   - Exact demonstration prompt.

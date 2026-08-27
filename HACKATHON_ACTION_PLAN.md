@@ -100,7 +100,7 @@ The TestPilot implementation is complete, publicly deployed, and production-veri
   - Keep the project name specific and human-written.
   - Suggested working tagline: **“Agent-native QA mission control that turns release risk into traceable evidence.”**
 
-- [ ] **15. Write the Devpost project description.**
+- [x] **15. Write the Devpost project description.**
   - Explain the real QA release-decision problem.
   - Explain why WebMCP is a strong fit.
   - Explain why semantic tools are better than fragile DOM automation.

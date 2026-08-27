@@ -1,6 +1,6 @@
 # TestPilot
 
-**Agent-native QA Mission Control for the OpenAI WebMCP Challenge**
+**Agent-native QA mission control that turns release risk into traceable evidence.**
 
 TestPilot is a compact release-engineering workspace where a human and an AI agent investigate the same live QA state. The human gets a polished mission-control UI for requirements, test cases, executions, defects, traceability, and release readiness. The agent gets strongly described semantic actions registered directly by the page through WebMCP.
 

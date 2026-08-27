@@ -96,7 +96,7 @@ The TestPilot implementation is complete, publicly deployed, and production-veri
 
 ## Phase 3 — Submission material
 
-- [ ] **14. Finalize the project name and tagline.**
+- [x] **14. Finalize the project name and tagline.**
   - Keep the project name specific and human-written.
   - Suggested working tagline: **“Agent-native QA mission control that turns release risk into traceable evidence.”**
 

@@ -81,7 +81,7 @@ The TestPilot implementation is complete, publicly deployed, and production-veri
   - Run the complete quality gate.
   - Correct any missing prerequisite or setup instruction.
 
-- [ ] **12. Preserve hackathon-period evidence.**
+- [x] **12. Preserve hackathon-period evidence.**
   - Keep the dated commit history showing development during the submission period.
   - Clearly state whether the project was newly created during the hackathon.
   - If any work predates August 25, 2026, document exactly what WebMCP functionality was added afterward.

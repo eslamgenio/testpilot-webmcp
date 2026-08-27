@@ -230,6 +230,10 @@ vite.config.ts           Vinext, Sites, and Cloudflare runtime integration
 - Browsers without WebMCP show **Preview mode**. The human dashboard and HTTP APIs still work, but agent discovery requires a WebMCP-capable browser.
 - Account authentication is intentionally omitted so hackathon judges can test immediately without credentials.
 
+## Hackathon provenance
+
+The entire TestPilot project—including its concept, design, application code, WebMCP integration, tests, documentation, and deployment—was created during the OpenAI WebMCP Challenge hackathon period. No TestPilot code or design predates August 25, 2026. The repository retains the dated development and validation history on the `main` branch.
+
 ## Hosting
 
 TestPilot is publicly deployed on [OpenAI Sites](https://testpilot-qa.eslamgenio.chatgpt.site/) with a logical D1 binding named `DB`. Sites owns the production database and applies the checked-in Drizzle migration during deployment. Public visitors do not need an account; a secure anonymous session cookie keeps each visitor's deterministic demo workspace isolated.

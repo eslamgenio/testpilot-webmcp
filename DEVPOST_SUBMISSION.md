@@ -40,3 +40,14 @@ OpenAI Sites hosts the public application, while Cloudflare D1 persists each bro
 The e-commerce system and test runner are intentionally simulated, and TC-004 fails deterministically so judges can complete and repeat the full story reliably. The release logic, validation, persistence, traceability, tool registration, and human-agent state synchronization are implemented; the prototype does not claim to execute a real retailer's production tests.
 
 A production version could connect the same domain and WebMCP boundaries to CI/CD systems, real test runners, requirements platforms, defect trackers, source-control checks, and deployment approvals. Organization authentication, role-based access, audit retention, notifications, and configurable release policies could be added without changing the central interaction model: the human and agent collaborate on one live, evidence-backed release decision.
+
+## Judge testing instructions
+
+1. Open [TestPilot](https://testpilot-qa.eslamgenio.chatgpt.site/) in ChatGPT's in-app browser. For Chrome 149+, first enable `chrome://flags/#enable-webmcp-testing` and relaunch Chrome.
+2. Confirm the dashboard shows **14 agent tools live** and release 2.4 starts **AT RISK**.
+3. Ask the agent: **“Check whether version 2.4 is safe to release.”**
+4. Allow the agent to inspect the release and coverage, create the missing concurrency test, run it, diagnose the failure, create a critical defect, link the evidence, and reassess readiness.
+5. Confirm the dashboard ends **NOT READY**, with TC-004 failed, inventory at `-1`, and DEF-001 linked to the test and requirement.
+6. Select **Reset Demo** before repeating the walkthrough. The baseline returns to three passing tests, no defects, and REQ-003 uncovered.
+
+No account or credentials are required. Each browser receives an isolated anonymous demo workspace, so one judge's actions do not affect another judge.

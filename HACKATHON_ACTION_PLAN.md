@@ -111,7 +111,7 @@ The TestPilot implementation is complete, publicly deployed, and production-veri
   - Explain what makes TestPilot creative and different.
   - Clearly distinguish deterministic demo behavior from production integrations that could be added later.
 
-- [ ] **16. Prepare concise judge-testing instructions.**
+- [x] **16. Prepare concise judge-testing instructions.**
   - Open the public Site in ChatGPT's in-app browser or a supported WebMCP-enabled Chrome version.
   - Ask: **“Check whether version 2.4 is safe to release.”**
   - Allow the agent to inspect coverage, create the missing test, run it, diagnose the failure, create the defect, link the evidence, and reassess readiness.

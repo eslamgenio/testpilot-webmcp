@@ -14,7 +14,7 @@ The TestPilot implementation is complete, publicly deployed, and production-veri
 
 ## Phase 1 — Final application polish
 
-- [ ] **1. Fix production social-preview metadata.**
+- [x] **1. Fix production social-preview metadata.**
   - Ensure Open Graph and Twitter image URLs reference the production Site instead of `localhost:3000`.
   - Confirm the title, description, and preview image render correctly from the public URL.
 
@@ -39,11 +39,11 @@ The TestPilot implementation is complete, publicly deployed, and production-veri
   - Use a clear hackathon-ready commit message.
   - Confirm the working tree is clean after the commit.
 
-- [ ] **5. Redeploy the final version to the public Site.**
+- [x] **5. Redeploy the final version to the public Site.**
   - Preserve the existing Site URL and D1 binding.
   - Confirm that the Site remains publicly accessible without authentication.
 
-- [ ] **6. Perform a judge-style production verification in a fresh anonymous session.**
+- [x] **6. Perform a judge-style production verification in a fresh anonymous session.**
   - Confirm the application opens without authentication.
   - Confirm all 14 WebMCP tools are available.
   - Confirm the initial release status is **AT RISK**.

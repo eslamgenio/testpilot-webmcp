@@ -152,7 +152,7 @@ The TestPilot implementation is complete, publicly deployed, and production-veri
   - Use a readable resolution and browser zoom.
   - Test microphone clarity.
 
-- [ ] **21. Record the complete demonstration with narration.**
+- [x] **21. Record the complete demonstration with narration.**
   - Show the application functioning, not only slides.
   - Clearly explain what was built and how WebMCP is used.
   - Keep the final video shorter than three minutes.
